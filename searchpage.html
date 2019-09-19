@@ -1,0 +1,180 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search for your College</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<style>
+.check{
+		color:white;
+		}
+h4   {color: white;}
+input[type=submit]
+ {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+
+<link href="css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/searchpage.css" rel="stylesheet" type="text/css" media="all"/>
+
+
+</head>
+<body>
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+        	<span class="icon "></span>
+			<h1><a href="index.html">Education Overseas</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="searchpage.html" accesskey="1" title="search for college">Search for College</a></li>
+				<li ><a href="edithml.php" accesskey="2" title="editprofile">Edit Your Profile</a></li>
+				<li ><a href="index.html" accesskey="3" title="logout">Logout</a></li>
+				
+				
+			</ul>
+		</div>
+	</div>
+</div>
+
+		<div class="container"> 
+			
+				<form action="searchpage.php" method="post">
+				
+							
+							
+				
+				<script type= "text/javascript" src = "city.js"></script>
+					
+					
+							<h4>Select Country</h4> <select id="country" name ="country"></select>
+					
+					
+					<div class="">
+							<h4>Select City</h4> <select name ="city" id ="city"></select>
+
+
+							<script language="javascript">
+								populateCountries("country", "city"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+								
+							</script>
+					</div>
+					
+					<script type= "text/javascript" src ="course1.js"></script>
+					<div class="">
+							<h4>Select Degree*</h4> <select id="degree" name ="degree" required></select>
+					</div>
+					<div>
+							<h4>Select Program*</h4> <select name ="program" id="program" required></select>
+								<script language="javascript">
+									populateDegree("degree", "program"); 
+								</script>
+					</div>		
+
+					<div class="">
+						<h4>Price To</h4>
+						<select class="icon icon-cog" name="fee" required>
+							<option value="">Select Fee Range</option>
+							<option value="2000000">Rs.20,00,000</option>
+							<option value="3000000">Rs.30,00,000</option>
+							<option value="4000000">Rs.40,00,000</option>
+							<option value="5000000">Rs.50,00,000</option>
+							<option value="6000000">Rs.60,00,000</option>
+							<option value="7000000">Rs.70,00,000</option>
+							<option value="8000000">Rs.80,00,000</option>
+						</select>
+					</div>
+					
+						
+				
+			
+			
+			<h4><b>Did you take the following tests?</b><h4>
+				
+				<div class="check"> <i><h4>GRE</h4></i>
+						<input type="radio" name="gre" value="1" > Yes &nbsp;
+						<input type="radio" name="gre" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="grescore">
+				</div>
+				
+				<div class="check"> <i><h4>GMAT</h4></i>
+						<input type="radio" name="gmat" value="1" > Yes &nbsp;
+						<input type="radio" name="gmat" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="gmatscore">
+				</div>
+				
+				<div class="check"> <i><h4>ACT</h4></i>
+						<input type="radio" name="act" value="1"  > Yes &nbsp;
+						<input type="radio" name="act" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="actscore">
+				</div>
+				
+				<div class="check"> <i><h4>SAT</h4></i>
+						<input type="radio" name="sat" value="1" > Yes &nbsp;
+						<input type="radio" name="sat" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="satscore">
+				</div>
+				
+				<div class="check"> <i><h4>LSAT</h4></i>
+						<input type="radio" name="lsat" value="1" > Yes &nbsp;
+						<input type="radio" name="lsat" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="lsatscore">
+				</div>
+				
+				<div class="check"> <i><h4>TOEFL</h4></i>
+						<input type="radio" name="toefl" value="1" > Yes &nbsp;
+						<input type="radio" name="toefl" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="toeflscore">
+				</div>
+				
+				<div class="check"> <i><h4>IELTS</h4></i>
+						<input type="radio" name="ielts" value="1" > Yes &nbsp;
+						<input type="radio" name="ielts" value="0" checked> No &nbsp;&nbsp;
+						Score:&nbsp;&nbsp;<input type="text" name="ieltsscore">
+				</div>
+				
+				<div class="check">	<i><h4>Hostel Required</h4></i>
+						<input type="radio" name="hostel" value="1" > Yes &nbsp;
+						<input type="radio" name="hostel" value="0" checked>No
+				</div>
+				
+				<div class="check">
+						<i><h4>Scholarship Required</h4></i>
+						<input type="radio" name="scholarship" value="1" > Yes &nbsp;
+						<input type="radio" name="scholarship" value="0" checked>No
+				</div>
+					
+				<div class="check">
+						<i><h4>Sports clubs Required</h4></i>
+						<input type="radio" name="sports" value="1" > Yes &nbsp;
+						<input type="radio" name="sports" value="0" checked>No
+				</div>
+				
+				<div class="check">
+					<i><h4>Arts clubs Required</h4></i>
+						<input type="radio" name="arts" value="1" > Yes &nbsp;
+						<input type="radio" name="arts" value="0" checked>No
+				</div>
+					
+				<div class=""> 
+						<br><center><input type="submit" value="Search"> </center>
+				</div>
+				
+				
+				</form>
+		</div>
+		
+
+
+</body>
+</html>
